@@ -1,0 +1,31 @@
+<div th:fragment="html">
+    <script>
+        $(function(){
+            var oid = getUrlParms("oid");
+            var data4Vue = {
+                uri:'foreorderRefund'
+            };
+            //ViewModel
+            var vue = new Vue({
+                el: '#workingArea',
+                data: data4Vue,
+                mounted:function(){ //mounted　表示这个 Vue 对象加载成功了
+                    this.load();
+                },
+                methods: {
+                    load:function(){
+                        var url =  this.uri+"?oid="+oid;
+                        axios.get(url);
+                    }
+                }
+            });
+
+        })
+    </script>
+    <div class="orderFinishDiv">
+        <div class="orderFinishTextDiv">
+            <img src="static/img/site/orderFinish.png">
+            <span>已申请退款，等待卖家确认。</span>
+        </div>
+    </div>
+</div>

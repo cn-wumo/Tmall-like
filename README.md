@@ -7,4 +7,4 @@
     rest
     vue.js
 ### 项目地址：
-[点击此](https://github.com/czd15977/Tmall-like)
+[点击此](https://github.com/cn-wumo/Tmall-like)
